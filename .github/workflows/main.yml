@@ -21,10 +21,15 @@ jobs:
 
       - name: Install dependencies
         run: |
-          if [ -f requirements.txt ]; then
-            pip install -r requirements.txt
-          fi
+          pip install imageio pillow imageio-ffmpeg
 
       - name: Create Robot Video
         run: python robot_video.py
+
+      - name: Save Video
+        uses: actions/upload-artifact@v4
+        with:
+          name: robot-fight-video
+          path: videos/robot_fight.mp4
+          
         

@@ -70,7 +70,7 @@ try:
                 fill=color,
                 outline="white",
                 width=3
-            )
+            writer.append_data(np.array(img))
 
             # Chest light
             d.ellipse(

@@ -70,7 +70,7 @@ try:
                 fill=color,
                 outline="white",
                 width=3
-            )writer.append_data(img)
+            )
 
             # Chest light
             d.ellipse(
@@ -137,12 +137,13 @@ try:
             fill=(0, 220, 255)
         )
 
-        # Convert image to video frame
+        # Save video frame
         writer.append_data(np.asarray(img))
 
 finally:
     writer.close()
 
 print("Robot Fight video created successfully!")
+
 
 

@@ -70,7 +70,7 @@ try:
                 fill=color,
                 outline="white",
                 width=3
-        
+            )
 
             # Chest light
             d.ellipse(
